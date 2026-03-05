@@ -14,7 +14,9 @@ const Carousel = ({ imageUrls, title }) => {
           className="shrink-0 focus-within:ring-0 hover:bg-transparent"
           icon={Left}
           style="text"
-          onClick={() => setCurrentIndex((currentIndex - 1) % imageUrls.length)}
+          onClick={() =>
+            setCurrentIndex(prevIndex => (prevIndex - 1) % imageUrls.length)
+          }
         />
         <img
           alt={title}
@@ -25,7 +27,9 @@ const Carousel = ({ imageUrls, title }) => {
           className="shrink-0 focus-within:ring-0 hover:bg-transparent"
           icon={Right}
           style="text"
-          onClick={() => setCurrentIndex((currentIndex + 1) % imageUrls.length)}
+          onClick={() =>
+            setCurrentIndex(prevIndex => (prevIndex + 1) % imageUrls.length)
+          }
         />
       </div>
       <div className="flex space-x-1">
