@@ -2,7 +2,7 @@ import React from "react";
 
 import { Route, Switch, Redirect } from "react-router-dom";
 
-import PageNotFound from "./components/PageNotFound";
+import PageNotFound from "./components/commons/PageNotFound";
 import Product from "./components/Product";
 import ProductList from "./components/ProductList";
 
