@@ -14,7 +14,7 @@ const AddToCart = ({ slug }) => {
   const handleClick = e => {
     e.stopPropagation();
     e.preventDefault();
-    toggleIsInCart();
+    toggleIsInCart(slug);
   };
 
   return (
