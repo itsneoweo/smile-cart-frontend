@@ -26,9 +26,8 @@ const Product = () => {
     }
   };
 
-  useEffect(() => {
-    fetchProduct();
-  }, []);
+  // eslint-disable-next-line react-hooks/exhaustive-deps
+  useEffect(() => fetchProduct(), []);
 
   if (isError) return <PageNotFound />;
 
