@@ -7,7 +7,7 @@ import { useParams } from "react-router-dom";
 
 import Carousel from "./Carousel";
 
-import { Header, PageLoader, PageNotFound } from "../commons/Header";
+import { Header, PageLoader, PageNotFound } from "../commons";
 
 const Product = () => {
   const { slug } = useParams();
@@ -26,8 +26,9 @@ const Product = () => {
     }
   };
 
-  // eslint-disable-next-line react-hooks/exhaustive-deps
-  useEffect(() => fetchProduct(), []);
+  useEffect(() => {
+    fetchProduct();
+  }, []);
 
   if (isError) return <PageNotFound />;
 
